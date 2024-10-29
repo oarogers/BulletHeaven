@@ -1,0 +1,2 @@
+class_name UpgradeButton
+extends Button

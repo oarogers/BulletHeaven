@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://75l8glh4ynnp"]
+
+[ext_resource type="Script" path="res://ui/upgrade_menu/upgrade_button.gd" id="1_jx71l"]
+
+[node name="UpgradeButton" type="Button"]
+custom_minimum_size = Vector2(106, 60)
+offset_right = 8.0
+offset_bottom = 8.0
+size_flags_horizontal = 3
+text = "Upgrade Me!"
+clip_text = true
+script = ExtResource("1_jx71l")

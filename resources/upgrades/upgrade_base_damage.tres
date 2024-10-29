@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="UpgradeInfo" load_steps=2 format=3 uid="uid://dswfc718t2uih"]
+
+[ext_resource type="Script" path="res://resources/upgrades/upgrade_info.gd" id="1_f0t8i"]
+
+[resource]
+script = ExtResource("1_f0t8i")
+button_text = "Increase
+Damage"
+stat_to_increase = 1
+increase_amount = 2

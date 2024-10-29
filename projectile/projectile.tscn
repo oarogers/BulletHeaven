@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch78m1kp0111b"]
+
+[ext_resource type="PackedScene" uid="uid://qmiq0t5mchcr" path="res://hitbox/hitbox.tscn" id="1_0ybry"]
+[ext_resource type="Script" path="res://projectile/projectile.gd" id="1_cwypw"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2ktvi"]
+size = Vector2(5, 5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_roqux"]
+radius = 4.0
+
+[node name="Projectile" type="Node2D"]
+script = ExtResource("1_cwypw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_2ktvi")
+
+[node name="Hitbox" parent="." instance=ExtResource("1_0ybry")]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_roqux")

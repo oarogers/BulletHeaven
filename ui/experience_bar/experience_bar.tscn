@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://hddebkxfaq3"]
+
+[ext_resource type="Script" path="res://ui/experience_bar/experience_bar.gd" id="1_c4ua2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1gfo1"]
+bg_color = Color(0.141176, 0.141176, 0.141176, 0.501961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1dbl"]
+bg_color = Color(0.413648, 0.820968, 0.949794, 0.752941)
+
+[node name="ExperienceBar" type="ProgressBar"]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_1gfo1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_o1dbl")
+max_value = 1.0
+show_percentage = false
+script = ExtResource("1_c4ua2")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://djo4nxdj2qm25"]
+
+[ext_resource type="Script" path="res://visual_debugger/visual_debugger.gd" id="1_6y8hw"]
+
+[node name="VisualDebugger" type="Node2D"]
+script = ExtResource("1_6y8hw")

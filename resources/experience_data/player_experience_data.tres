@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ExperienceData" load_steps=3 format=3 uid="uid://321l4s56wg3k"]
+
+[ext_resource type="Script" path="res://resources/experience_data/experience_data.gd" id="1_ykgej"]
+
+[sub_resource type="Curve" id="Curve_fsj5x"]
+min_value = 15.0
+max_value = 1024.0
+_data = [Vector2(0, 15), 0.0, 400.0, 0, 0, Vector2(1, 1024), 2000.0, 0.0, 0, 0]
+point_count = 2
+
+[resource]
+script = ExtResource("1_ykgej")
+experience_curve = SubResource("Curve_fsj5x")

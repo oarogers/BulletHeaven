@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://di2pcf58gp6lg"]
+
+[ext_resource type="Script" path="res://ui/upgrade_menu/upgrade_menu.gd" id="1_he3dv"]
+[ext_resource type="Script" path="res://resources/upgrades/upgrade_info.gd" id="2_eono6"]
+[ext_resource type="Resource" uid="uid://q5o20kxhtu5" path="res://resources/upgrades/upgrade_max_health.tres" id="3_nbe5n"]
+[ext_resource type="Resource" uid="uid://dswfc718t2uih" path="res://resources/upgrades/upgrade_base_damage.tres" id="4_q4rny"]
+[ext_resource type="Resource" uid="uid://cdywnd7j6oyt7" path="res://resources/upgrades/heal_hp.tres" id="5_5s1x6"]
+
+[node name="UpgradeMenu" type="MarginContainer"]
+process_mode = 3
+custom_minimum_size = Vector2(320, 180)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -90.0
+offset_right = 160.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_he3dv")
+upgrades = Array[ExtResource("2_eono6")]([ExtResource("3_nbe5n"), ExtResource("4_q4rny"), ExtResource("5_5s1x6")])
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1

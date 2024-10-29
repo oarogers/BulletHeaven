@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjo0gmplw63f6"]
+
+[ext_resource type="Script" path="res://spawn_manager/spawn_manager.gd" id="1_10xtx"]
+[ext_resource type="PackedScene" uid="uid://dluicp3wlfu5u" path="res://enemy/enemy.tscn" id="2_0y6g5"]
+[ext_resource type="Resource" uid="uid://8pa3vylfotr7" path="res://resources/enemy_data/basic_enemy_data.tres" id="3_lrt4d"]
+
+[sub_resource type="Curve" id="Curve_llm46"]
+_data = [Vector2(0, 1), 0.0, 0.2, 0, 0, Vector2(0.8, 0.01), 0.0, -1.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_v3iqo"]
+min_value = 20.0
+max_value = 512.0
+_data = [Vector2(0, 20), 0.0, 0.0, 0, 0, Vector2(1, 512), 800.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_sjltx"]
+min_value = 1.0
+max_value = 10.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 10), 20.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="SpawnManager" type="Node"]
+script = ExtResource("1_10xtx")
+enemy_scene = ExtResource("2_0y6g5")
+enemy_data = ExtResource("3_lrt4d")
+spawn_rate_curve = SubResource("Curve_llm46")
+enemies_per_wave_curve = SubResource("Curve_v3iqo")
+enemy_stat_growth_rate_curve = SubResource("Curve_sjltx")
+
+[node name="SpawnTimer" type="Timer" parent="."]
